@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"br\/com\/karate\/features\/goRestTest[1.1:18]","start":1730756805990,"end":1730756808404,"title":"br\/com\/karate\/features\/goRestTest[1.1:18] 17:46:45.990-17:46:48.404 Criar um novo usuário"},{"id":2,"group":1,"content":"br\/com\/karate\/features\/goRestTest[1.2:19]","start":1730756808421,"end":1730756809903,"title":"br\/com\/karate\/features\/goRestTest[1.2:19] 17:46:48.421-17:46:49.903 Criar um novo usuário"},{"id":3,"group":1,"content":"br\/com\/karate\/features\/goRestTest[1.3:20]","start":1730756809915,"end":1730756811370,"title":"br\/com\/karate\/features\/goRestTest[1.3:20] 17:46:49.915-17:46:51.370 Criar um novo usuário"},{"id":4,"group":1,"content":"br\/com\/karate\/features\/goRestTest[2:23]","start":1730756811386,"end":1730756812789,"title":"br\/com\/karate\/features\/goRestTest[2:23] 17:46:51.386-17:46:52.789 Obter todos os usuários"},{"id":5,"group":1,"content":"br\/com\/karate\/features\/goRestTest[3:30]","start":1730756812806,"end":1730756813506,"title":"br\/com\/karate\/features\/goRestTest[3:30] 17:46:52.806-17:46:53.506 Atualizar um usuário"},{"id":6,"group":1,"content":"br\/com\/karate\/features\/simpleTest[1:11]","start":1730756814243,"end":1730756814947,"title":"br\/com\/karate\/features\/simpleTest[1:11] 17:46:54.243-17:46:54.947 Verify simple functionality"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

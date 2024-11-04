@@ -1,0 +1,16 @@
+#Feature: Geração de Token
+
+#Scenario: Obter token
+    #Given url 'https://api.exemplo.com/token'
+    #When request { "username": "user", "password": "pass" }
+    #Then status 200
+    #And def token = response.token
+    #And karate.configure('token', token) # Armazena o token em uma configuração
+
+#Feature: Uso do Token
+
+#Scenario: Fazer uma requisição autenticada
+    #Given url 'https:#api.exemplo.com/protected'
+    #And header Authorization = 'Bearer ' + karate.get('token') # Usa o token armazenado
+    #When method get
+    #Then status 200   

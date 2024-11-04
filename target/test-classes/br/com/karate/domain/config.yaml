@@ -1,0 +1,7 @@
+qa:
+  env: 'qa'
+  baseUrl: 'https://gorest.co.in/public/v2/'
+
+hml:
+  env: 'hml'
+  baseUrl: ''
