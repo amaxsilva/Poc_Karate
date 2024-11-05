@@ -45,15 +45,15 @@ Feature: Testes de API para o Gorest
 
    @put @atualizarUsuario
    Scenario: Atualizar um usuário
-     Given path 'users/7497949'
-     And request { "name": "#(config.randomName())", "email": "#(config.randomEmail())", "status": "inactive" }
+     Given path 'users/7504747'
+     And request { "name": "#(config.randomName())", "email": "#(config.randomEmail())", "status": "active" }
      When method put
      Then status 200
      And print response
 
   @put @campoEmBranco
   Scenario: Atualizar um usuário com campo em banco
-    Given path 'users/7497949'
+    Given path 'users/7504739'
     And request { "name": "#(config.randomName())", "email": "#(config.randomEmail())", "status": "" }
     When method put
     Then status 422

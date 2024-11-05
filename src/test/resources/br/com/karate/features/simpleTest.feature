@@ -9,6 +9,6 @@ Feature: Buscar User
     * header Authorization = 'Bearer ' + config.token
 
   Scenario: Verify simple functionality
-    Given path 'users/7497949'
+    Given path 'users/7504739'
     When method get
     Then status 200
