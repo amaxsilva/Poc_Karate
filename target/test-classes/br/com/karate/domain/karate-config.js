@@ -9,7 +9,7 @@ function fn() {
     karate.log('karate.env system property was:', env);
 
     // Adiciona o token ao objeto de configuração
-    config.token = 'b0975bbe658bc9bd91e320f16a8842297d5692af0df160397003984c9acfb1a2';
+    config.token = 'seu_token';
 
     config.randomEmail = function() {
         return 'user' + Math.floor(Math.random() * 10000) + '@example.com';
